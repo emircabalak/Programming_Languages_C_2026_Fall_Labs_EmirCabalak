@@ -14,7 +14,7 @@
 #include <stdio.h>
 #include <string.h>
 
-// Groups the three fields of one student so they can be handled as a single value.
+// Keeps the name, ID and grade of one student together in a single variable.
 struct Student {
     char name[50];
     int id;

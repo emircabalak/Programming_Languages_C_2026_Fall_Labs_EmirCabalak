@@ -33,10 +33,10 @@ int main(void) {
         return 1;
     }
 
-    // The number of records is only known at runtime, so the array is allocated on the heap.
+    // We only learn the number of students at runtime, so the array has to live on the heap.
     students = malloc(n * sizeof(struct Student));
 
-    // malloc returns NULL when the memory cannot be reserved; using it would crash.
+    // malloc returns NULL if it cannot reserve the memory, and using a NULL pointer would crash the program.
     if (students == NULL) {
         printf("Memory allocation failed.\n");
         return 1;
